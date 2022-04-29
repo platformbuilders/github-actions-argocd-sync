@@ -1,0 +1,25 @@
+name: GitHub actions kustomize argocd manifests
+author: Gabriel Ferreira <gabriel.oliveira@platformbuilders.io>
+description: GitHub action used kustomize applications manifests
+branding:
+  icon: feather
+  color: gray-dark
+
+inputs:
+  app_id:
+    description: 'The App ID'
+    required: true
+  argocd_username:
+    description: 'The ArgoCD Username'
+    required: true
+  argocd_password:
+    description: 'The ArgoCD Password'
+    required: true
+
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - ${{ inputs.app_id }}
+    - ${{ inputs.argocd_username }}
+    - ${{ inputs.argocd_password }}
