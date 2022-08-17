@@ -7,7 +7,7 @@ APPID=$1
 TOKENARGO=$2
 ENV=$3
 APPSYNC="$APPID-$ENV"
-ARGOURL='argocd-server.argocd.svc.cluste.local'
+ARGOURL='argocd-server.argocd.svc.cluster.local'
 
 argocd --server $ARGOURL --insecure version --short
 sleep 2
