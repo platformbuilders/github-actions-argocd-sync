@@ -6,20 +6,20 @@ branding:
   color: gray-dark
 
 inputs:
-  app_id:
+  appid:
     description: 'The App ID'
     required: true
-  argocd_username:
-    description: 'The ArgoCD Username'
+  tokenargo:
+    description: 'The ArgoCD token to authenticate'
     required: true
-  argocd_password:
-    description: 'The ArgoCD Password'
+  env:
+    description: 'The app env (develop|homolog|prod)'
     required: true
 
 runs:
   using: 'docker'
   image: 'Dockerfile'
   args:
-    - ${{ inputs.app_id }}
-    - ${{ inputs.argocd_username }}
-    - ${{ inputs.argocd_password }}
+    - ${{ inputs.appid }}
+    - ${{ inputs.tokenargo }}
+    - ${{ inputs.env }}
