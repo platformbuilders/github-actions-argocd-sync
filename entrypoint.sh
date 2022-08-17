@@ -8,7 +8,7 @@ APPSYNC="$APPID-$ENV"
 ARGOURL='argocd-server.argocd.svc.cluster.local'
 
 echo -e "\033[0;36m ======> APP $APPSYNC \033[0m\n"
-argocd app get "$APPSYNC" --server "$ARGOURL" --grpc-web --insecure-skip-tls-verify --auth-token "$TOKENARGO"
+argocd app get "$APPSYNC" --server "$ARGOURL" --grpc-web --insecure --auth-token "$TOKENARGO"
 
 sleep 5
 
