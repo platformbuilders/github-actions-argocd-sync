@@ -15,4 +15,7 @@ sleep 5
 echo -e "\033[0;36m======> SYNC $APPSYNC \033[0m\n"
 argocd app sync "$APPSYNC" --server "$ARGOURL" --grpc-web --insecure --auth-token "$TOKENARGO"
 
+echo -e "\033[0;36m======> WAIT SYNC $APPSYNC \033[0m\n"
+argocd app wait "$APPSYNC" --server "$ARGOURL" --grpc-web --insecure --auth-token "$TOKENARGO"
+
 echo -e "\033[0;36m======> DONE \033[0m\n"
