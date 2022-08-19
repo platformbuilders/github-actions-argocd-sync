@@ -1,6 +1,6 @@
 name: GitHub actions kustomize argocd manifests
 author: Gabriel Ferreira <gabriel.oliveira@platformbuilders.io>
-description: GitHub action used kustomize applications manifests
+description: GitHub action used sync ArgoCD apps
 branding:
   icon: feather
   color: gray-dark
