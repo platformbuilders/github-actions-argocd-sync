@@ -23,6 +23,7 @@ There are no outputs for this action
           appid: ${{ secrets.APP_ID }}
           env: 'develop'
           tokenargo: ${{ secrets.TOKENARGO }}
+          argourl: <ArgoCD URL:443>
 ```
 
 ## How to send updates?
@@ -36,5 +37,6 @@ If you wants to update or make changes in module code you should use the **devel
           appid: ${{ secrets.APP_ID }}
           env: 'develop'
           tokenargo: ${{ secrets.TOKENARGO }}
+          argourl: <ArgoCD URL:443>
 ```
 After execute all tests you can open a pull request to the master branch.
