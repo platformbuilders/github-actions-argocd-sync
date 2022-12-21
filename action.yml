@@ -15,6 +15,9 @@ inputs:
   env:
     description: 'The app env (develop|homolog|prod)'
     required: true
+  argourl:
+    description: 'The ArgoCD URL'
+    required: true
 
 runs:
   using: 'docker'
@@ -23,3 +26,4 @@ runs:
     - ${{ inputs.appid }}
     - ${{ inputs.tokenargo }}
     - ${{ inputs.env }}
+    - ${{ inputs.argourl }}
