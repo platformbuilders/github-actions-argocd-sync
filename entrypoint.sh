@@ -5,7 +5,7 @@ APPID=$1
 TOKENARGO=$2
 ENV=$3
 APPSYNC="$APPID-$ENV"
-ARGOURL='argocd-server.argocd.svc.cluster.local'
+ARGOURL=$3
 
 echo -e "\033[0;36m ======> APP $APPSYNC \033[0m\n"
 argocd app get "$APPSYNC" --server "$ARGOURL" --grpc-web --insecure --auth-token "$TOKENARGO"
